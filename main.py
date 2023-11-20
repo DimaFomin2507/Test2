@@ -1,16 +1,55 @@
-# This is a sample Python script.
+# """
+# *
+# **
+# ***
+# ****
+# """
+#
+# def f(size):
+#     for i in range(1, size + 1):
+#         print(i * "*")
+# f(4)
+# f(10)
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+# def f(size):
+#     if size <= 0:
+#         return
+#     if size == 1:
+#         print("*")
+#         return
+#     print((size - 2) * "*")
+#     for _ in range(size - 2):
+#         print("*" + (size - 2) * " " + "*")
+#     print((size - 2) * "*")
+# print("_")
+# f(0)
+# print("_")
+# f(1)
+# f(6)
+# f(9)
 
+# def f2(number):
+#     return len(str(number))
+#
+# def f3(number):
+#     i = 0
+#     while number:
+#         number //= 10
+#         i += 1
+#     return i
+# print(f2(1234))
+# print(f3(1234))
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+def f(number):
+    back_number = 0
+    input_number = number
+    while number:
+        back_number *=10
+        back_number += number % 10
+        number //= 10
+    return back_number == input_number
 
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print(
+f(1234),
+f(12321),
+f(12344321),)
